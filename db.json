@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "无线蓝牙耳机",
+      "price": 299,
+      "description": "高音质无线蓝牙耳机，续航时间长",
+      "image": "/products/1.png"
+    },
+    {
+      "id": "2",
+      "title": "智能手表",
+      "price": 599,
+      "description": "多功能智能手表，支持健康监测",
+      "image": "/products/2.png"
+    },
+    {
+      "id": "3",
+      "title": "笔记本电脑",
+      "price": 4999,
+      "description": "高性能轻薄本，适合办公和娱乐",
+      "image": "/products/3.png"
+    }
+  ]
+}
