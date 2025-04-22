@@ -10,9 +10,24 @@ interface ProductCardProps {
 function ProductCard({ product }: ProductCardProps) {
     const [cart, setCart] = useAtom(cartAtom)
     const addToCart = () => {
-        setCart([...cart, { ...product, quantity: 1 }])
+        const existingProduct = cart.find((item) => item.id === product.id)
+        if (existingProduct) {
+            setCart(
+                cart.map((item) => {
+                    if (item.id === product.id) {
+                        return { ...item, quantity: item.quantity + 1 }
+                    } else {
+                        return item;
+                    }
+                })
+            )
+        } else {
+            setCart([...cart, { ...product, quantity: 1 }])
+        }
+
         console.log(cart);
-        
+
+
     }
     return (
         <div className="border rounded-lg p-4 shadow-md">

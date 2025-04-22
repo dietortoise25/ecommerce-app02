@@ -20,8 +20,8 @@ const slides = [
     {
         id: "3",
         title: "特价商品",
-        description: "最新的科技产品",
         image: "/products/3.png",
+        description: "最新的科技产品",
         buttonText: '立即购买',
         buttonLink: '/product/3'
     }
