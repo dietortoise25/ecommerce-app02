@@ -13,17 +13,6 @@ import {
 import { cartAtom } from '../store/store';
 import { useEffect, useState } from 'react';
 
-// // 模拟商品数据
-// const mockProducts: Product[] = [
-//     {
-//         id: "1",
-//         title: '无线降噪耳机',
-//         price: 599,
-//         description: '高端主动降噪技术，30小时续航，Hi-Res音质认证',
-//         image: 'https://q9.itc.cn/images01/20241022/4af89c9219be480faf091adf6141dd9f.jpeg',
-//     }
-// ];
-
 
 export default function ProductPage() {
     const [product, setProduct] = useState<Product | null>(null);
@@ -36,7 +25,7 @@ export default function ProductPage() {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/products/${id}`);
+                const response = await fetch(`http://localhost:3001/products/${id}`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }

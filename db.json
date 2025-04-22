@@ -21,5 +21,19 @@
       "description": "高性能轻薄本，适合办公和娱乐",
       "image": "/products/3.png"
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "token": "fake-jwt-token-1"
+    },
+    {
+      "id": 2,
+      "username": "user1",
+      "password": "password1",
+      "token": "fake-jwt-token-2"
+    }
   ]
 }

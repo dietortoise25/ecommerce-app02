@@ -88,22 +88,15 @@ export default function Navbar() {
 
             {/* 用户状态 */}
             {user ? (
-              <div className="relative group">
-                <button className="flex items-center space-x-1 p-2 hover:bg-gray-100 rounded-lg">
-                  <HiOutlineUser className="h-6 w-6 text-gray-600" />
-                  <span className="hidden md:inline">{user.name}</span>
+              <div className="flex items-center space-x-2">
+                <span className="md:inline text-gray-600">{user.username}</span>
+                <button 
+                  onClick={handleLogout}
+                  className="flex items-center p-2 hover:bg-gray-100 rounded-lg text-gray-600"
+                >
+                  <HiOutlineUser className="h-5 w-5" />
+                  <span className="ml-1">Logout</span>
                 </button>
-
-                {/* 下拉菜单 */}
-                <div className="hidden group-hover:block absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg">
-                  <button
-                    onClick={handleLogout}
-                    className="flex items-center w-full px-4 py-2 text-left hover:bg-gray-100"
-                  >
-                    <HiOutlineUser className="mr-2 h-5 w-5" />
-                    Logout
-                  </button>
-                </div>
               </div>
             ) : (
               <Link
