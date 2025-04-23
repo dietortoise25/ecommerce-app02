@@ -6,6 +6,8 @@ import ProductPage from "./pages/Product";
 import ProductsPage from "./pages/Products";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import { AuthGuard } from "./components/AuthGuard";
+import UserProfile from "./pages/UserProfile";
 
 
 const router = createBrowserRouter([
@@ -26,7 +28,15 @@ const router = createBrowserRouter([
       },
       { path: "login", element: <Login /> },
       { path: "register", element: <Register /> },
-      { path: "*", element: <h1>404 Not Found</h1> }
+      { path: "*", element: <h1>404 Not Found</h1> },
+      {
+        path: "/profile",
+        element: (
+          <AuthGuard>
+            <UserProfile />
+          </AuthGuard>
+        )
+      },
     ]
   }
 ])

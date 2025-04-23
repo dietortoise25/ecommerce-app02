@@ -37,7 +37,7 @@ export default function Navbar() {
               to="/"
               className="flex items-center text-xl font-bold text-gray-800"
             >
-              <HiShoppingBag  className="mr-2 h-6 w-6" />
+              <HiShoppingBag className="mr-2 h-6 w-6" />
               A-Shop
             </Link>
 
@@ -48,7 +48,7 @@ export default function Navbar() {
                   'flex items-center px-3 py-2 rounded-md text-sm font-medium',
                   {
                     'bg-gray-900 text-white': location.pathname === '/',
-                    'text-gray-600 hover:bg-gray-100 hover:text-gray-900': location.pathname !== '/products'
+                    'text-gray-600 hover:bg-gray-100 hover:text-gray-900': location.pathname !== '/'
                   }
                 )}
               >
@@ -68,8 +68,21 @@ export default function Navbar() {
                 <HiOutlineCollection className="mr-1 h-5 w-5" />
                 Products
               </Link>
+              <Link
+                to="/profile"
+                className={classNames(
+                  'flex items-center px-3 py-2 rounded-md text-sm font-medium',
+                  {
+                    'bg-gray-900 text-white': location.pathname === "/profile",
+                    'text-gray-600 hover:bg-gray-100 hover:text-gray-900': location.pathname !== "/profile"
+                  }
+                )}
+              >
+                <HiOutlineCollection className="mr-1 h-5 w-5" />
+                Profile(鉴权测试)
+              </Link>
             </div>
-          </div>
+          </div>AuthGar
 
           {/* 右侧导航 */}
           <div className="flex items-center space-x-4">
@@ -90,7 +103,7 @@ export default function Navbar() {
             {user ? (
               <div className="flex items-center space-x-2">
                 <span className="md:inline text-gray-600">{user.username}</span>
-                <button 
+                <button
                   onClick={handleLogout}
                   className="flex items-center p-2 hover:bg-gray-100 rounded-lg text-gray-600"
                 >
