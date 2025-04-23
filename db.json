@@ -24,16 +24,46 @@
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "admin",
       "password": "admin123",
       "token": "fake-jwt-token-1"
     },
     {
-      "id": 2,
+      "id": "2",
       "username": "user1",
       "password": "password1",
       "token": "fake-jwt-token-2"
+    },
+    {
+      "id": "1039",
+      "username": "user1",
+      "password": "password1",
+      "token": "fake-token"
+    },
+    {
+      "id": "6b95",
+      "username": "user123",
+      "password": "password1",
+      "token": "fake-token"
+    },
+    {
+      "id": "3520",
+      "username": "user222",
+      "password": "password1",
+      "token": "fake-token"
+    },
+    {
+      "id": "4565",
+      "username": "user12",
+      "password": "password1",
+      "token": "fake-token"
+    },
+    {
+      "id": "b0b8",
+      "username": "user1234",
+      "password": "password1",
+      "token": "fake-token"
     }
   ]
 }

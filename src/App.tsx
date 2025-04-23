@@ -5,6 +5,7 @@ import Cart from "./components/Cart";
 import ProductPage from "./pages/Product";
 import ProductsPage from "./pages/Products";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,8 @@ const router = createBrowserRouter([
         path: "cart", element: <Cart />
       },
       { path: "login", element: <Login /> },
+      { path: "register", element: <Register /> },
+      { path: "*", element: <h1>404 Not Found</h1> }
     ]
   }
 ])
