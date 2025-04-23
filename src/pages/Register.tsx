@@ -21,33 +21,6 @@ function Register() {
             console.log(res);
             navigate('/login');
         }
-
-
-
-
-        // // 模拟注册请求
-        // try {
-        //     const response = await axios.post('http://localhost:3001/users', {
-        //         username,
-        //         password,
-        //         token: "fake-token"
-        //     });
-
-        //     const users = response.data;
-        //     console.log(users);
-
-        //     if (users.length > 0) {
-        //         console.log('注册成功');
-        //         navigate('/login');
-        //     }
-        //     else {
-        //         alert('注册失败');
-        //     }
-        // }
-        // catch (error) {
-        //     console.error('注册错误:', error);
-        //     alert('网络错误，请重试');
-        // }
     }
     return (
         <div className="flex justify-center items-center mt-10">

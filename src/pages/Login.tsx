@@ -48,7 +48,7 @@ function Login() {
                 />
 
                 <button className="btn btn-neutral mt-4" onClick={handleLogin}>Login</button>
-                <button className="btn btn-neutral mt-4" onClick={()=>navigate('/register')}>Register</button>
+                <button className="btn btn-neutral mt-4" onClick={() => navigate('/register')}>Register</button>
             </fieldset>
         </div>
     );
