@@ -7,6 +7,7 @@ import ProductsPage from "./pages/Products";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
 ])
 
 function App() {
+
   return (
     <RouterProvider router={router} />
   )
